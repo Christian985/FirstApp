@@ -31,7 +31,7 @@ def exemplo_get(id):
 
 # exemplo_get(5)
 
-
+# Somente o put usa 201
 def exemplo_post():
     url = "https://jsonplaceholder.typicode.com/posts"
 
@@ -65,5 +65,12 @@ def exemplo_put(id):
     }
 
     response = requests.put(url, json=nova_postagem)
+
+    if response.status_code == 200:
+        dados_postagem = response.json()
+        print(f"Titulo: {dados_postagem['title']}\n")
+    else:
+        print(f"Erro: {response.status_code}")
+
 
 exemplo_put()
