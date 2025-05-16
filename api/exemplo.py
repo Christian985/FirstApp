@@ -1,6 +1,6 @@
 import requests
 
-cep = "01001000"
+cep = "16702144"
 
 url = f"https://viacesp.com.br/ws/{cep}/json/"
 response = requests.get(url)
