@@ -70,7 +70,7 @@ def exemplo_put(id):
     if response.status_code == 200:
         if antes.status_code == 200:
             dados_antes = antes.json()
-            print(f"Titulo Antigo: {dados_antes['title']}\n")
+            print(f"Titulo Asntigo: {dados_antes['title']}\n")
         else:
             print(f"Erro: {response.status_code}")
         dados_postagem = response.json()
