@@ -50,6 +50,19 @@ def exemplo_post():
     else:
         print(f"Erro: {response.status_code}")
 
-exemplo_post()
-def exemplo_put():
-    url = "https://jsonplaceholder.typicode.com/posts/1"
+
+# exemplo_post()
+
+
+def exemplo_put(id):
+    url = f"https://jsonplaceholder.typicode.com/posts/{id}"
+
+    nova_postagem = {
+        "id": 1,
+        "title": "Novo titulo",
+        "body": "Novo conteudo",
+        "userID": 1
+    }
+
+
+exemplo_put()
