@@ -58,11 +58,12 @@ def exemplo_put(id):
     url = f"https://jsonplaceholder.typicode.com/posts/{id}"
 
     nova_postagem = {
-        "id": 1,
+        "id": id,
         "title": "Novo titulo",
         "body": "Novo conteudo",
         "userID": 1
     }
 
+    response = requests.put(url, json=nova_postagem)
 
 exemplo_put()
