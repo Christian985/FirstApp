@@ -29,11 +29,17 @@ def exemplo_get(id):
         print(f"Erro: {response.status_code}")
 
 
-exemplo_get(5)
+# exemplo_get(5)
 
 
 def exemplo_post():
     url = "https://jsonplaceholder.typicode.com/posts"
+
+    nova_postagem = {
+        "title": "Postagem",
+        "body": "Postagem",
+        "userID": 1
+    }
 
 
 def exemplo_put():
