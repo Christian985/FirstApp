@@ -15,11 +15,26 @@ def exemplo_cep():
     else:
         print(f"Erro: {response.status_code}")
 
+
 def exemplo_get():
     url = "https://jsonplaceholder.typicode.com/posts/1"
+    response = requests.get(url)
+
+    if response.status_code == 200:
+        dados_get_postagem = response.json()
+
+        print(f"Título: {dados_get_postagem['title']}")
+        print(f"Conteúdo: {dados_get_postagem['body']}")
+    else:
+        print(f"Erro: {response.status_code}")
+
+
+exemplo_get()
+
 
 def exemplo_post():
     url = "https://jsonplaceholder.typicode.com/posts"
+
 
 def exemplo_put():
     url = "https://jsonplaceholder.typicode.com/posts/1"
