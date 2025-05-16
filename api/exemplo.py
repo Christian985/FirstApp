@@ -45,11 +45,11 @@ def exemplo_post():
 
     if response.status_code == 201:
         dados_postagem = response.json()
-        print(f"Titulo: {response.status_code['title']}\n")
+        print(f"Titulo: {dados_postagem['title']}\n")
         print(f"Conteúdo: {dados_postagem['body']}")
     else:
         print(f"Erro: {response.status_code}")
 
-
+exemplo_post()
 def exemplo_put():
     url = "https://jsonplaceholder.typicode.com/posts/1"
