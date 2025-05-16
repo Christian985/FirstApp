@@ -36,10 +36,19 @@ def exemplo_post():
     url = "https://jsonplaceholder.typicode.com/posts"
 
     nova_postagem = {
-        "title": "Postagem",
-        "body": "Postagem",
+        "title": "Novo titulo",
+        "body": "Novo conteudo",
         "userID": 1
     }
+
+    response = requests.post(url, json=nova_postagem)
+
+    if response.status_code == 201:
+        dados_postagem = response.json()
+        print(f"Titulo: {response.status_code['title']}\n")
+        print(f"Conteúdo: {dados_postagem['body']}")
+    else:
+        print(f"Erro: {response.status_code}")
 
 
 def exemplo_put():
